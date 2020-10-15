@@ -1,0 +1,48 @@
+[
+  {
+    "PROPER_NAME": "HP Recovery",
+    "NAMES": [
+      "HP Recovery",
+      "HP_Recovery",
+      "Hp Recovery",
+      "Hp_Recovery"
+    ],
+    "DESCRIPTION": "Gain #b3 Hp at end of your turn, every round #b-1 , Remove when you take damage."
+  },
+  {
+    "PROPER_NAME": "MP Recovery",
+    "NAMES": [
+      "MP Recovery",
+      "MP_Recovery",
+      "Mp Recovery",
+      "Mp_Recovery"
+    ],
+    "DESCRIPTION": "Gain [E] at start of your turn, every round #b-1 , Remove when you take damage."
+  },
+  {
+    "PROPER_NAME": "Lifesteal",
+    "NAMES": [
+      "Lifesteal",
+      "lifesteal",
+      "Life Steal",
+      "Life_Steal"
+    ],
+    "DESCRIPTION": "Heals the attacker for #b1%*Stack of attack damage dealt, Remove at end of turn."
+  },
+  {
+    "PROPER_NAME": "Invisibility",
+    "NAMES": [
+      "Invisibility",
+      "invisibility"
+    ],
+    "DESCRIPTION": "Reduce take damage to half when you have #yInvisibility, your next card damage gain #b+50% up. Remove when you attack, every round #b-1 ."
+  },
+  {
+    "PROPER_NAME": "DagonPower",
+    "NAMES": [
+      "DagonPower",
+      "dagonPower"
+    ],
+    "DESCRIPTION": "Attack card, cost #b1  [E] .Base damage #b15 , when Dagon upgrade, add #b10 damage."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "Dota2Spire:HealingSalve": {
+    "NAME": "治疗药膏",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      " 层 #y血量恢复 。"
+    ]
+  },
+  "Dota2Spire:Clarity": {
+    "NAME": "净化药水",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      " 层 #y魔法恢复 。"
+    ]
+  }
+}

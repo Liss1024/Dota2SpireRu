@@ -1,0 +1,16 @@
+{
+  "Dota2Spire:HealingSalve": {
+    "NAME": "Healing Salve",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      "  #yHpRecovery ."
+    ]
+  },
+  "Dota2Spire:Clarity": {
+    "NAME": "Clarity",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      "  #yMpRecovery ."
+    ]
+  }
+}

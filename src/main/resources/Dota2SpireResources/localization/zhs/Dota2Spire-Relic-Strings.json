@@ -1,0 +1,177 @@
+{
+  "Dota2Spire:EchoSabre": {
+    "NAME": "回音战刃",
+    "FLAVOR": "一把看似迅捷异常的战刃，其中注入了共鸣魔力。",
+    "DESCRIPTIONS": [
+      "每隔 #b{0} 回合，你的下一张攻击牌打出 #b2 次。"
+    ]
+  },
+  "Dota2Spire:Butterfly": {
+    "NAME": "蝴蝶",
+    "FLAVOR": "只有最强大最老练的战士才能携带蝴蝶，但它也提供无可比拟的战斗灵活力作为回报。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b{0} 点 #y敏捷 。 NL 受到攻击伤害时有 #b{1}% 几率闪避。"
+    ]
+  },
+  "Dota2Spire:Desolator": {
+    "NAME": "黯灭",
+    "FLAVOR": "这件邪恶并且嗜血的武器，通常用于拷打政治犯。",
+    "DESCRIPTIONS": [
+      "第一次对敌人攻击时，给与 #b{0} 层 #y易伤。"
+    ]
+  },
+  "Dota2Spire:MagicBottle": {
+    "NAME": "魔瓶",
+    "FLAVOR": "一个流传至今的古老瓶子，内部空间随着时间的流逝逐渐拥有魔力。",
+    "DESCRIPTIONS": [
+      "可使用 #b{0} 次。 NL 在你的回合，右键点击此遗物获取 #b{1} #y血量恢复 和 #b{2} #y魔法恢复 。 NL 到达 #y篝火 自动恢复使用次数。"
+    ]
+  },
+  "Dota2Spire:HeartOfTarrasque": {
+    "NAME": "恐鳌之心",
+    "FLAVOR": "保存完好的心脏，来自早已绝种的怪兽，能提升携带者的耐久力。",
+    "DESCRIPTIONS": [
+      "拾取时最大生命值 #b+{0} 。 NL 战斗开始后，若持续 #b{1} 回合未受到伤害，之后回合开始时恢复 #b{2} #yHP 。 NL 受到伤害后重置（ #y失去生命 的伤害不会重置）。"
+    ]
+  },
+  "Dota2Spire:Satanic": {
+    "NAME": "撒旦之邪力",
+    "FLAVOR": "无穷的力量，需要你付出灵魂作为代价。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b{0} 点 #y力量 。 NL 在你的回合，右键点击此遗物获得 #b{1} 层 #y吸血 。 NL CD #b{2} 回合。"
+    ]
+  },
+  "Dota2Spire:MaskOfMadness": {
+    "NAME": "疯狂面具",
+    "FLAVOR": "一旦戴上这个面具就会变成无法控制的好战分子。",
+    "DESCRIPTIONS": [
+      "在你的回合，右键点击此遗物获得 #b{0} 层 #y吸血 和 #b{1} 层 #y易伤 。 NL CD #b{2} 回合。"
+    ]
+  },
+  "Dota2Spire:ShadowBlade": {
+    "NAME": "影刃",
+    "FLAVOR": "一位国王死后留下的宝剑，拿着它你可以隐身移动并从阴影中发动突袭。",
+    "DESCRIPTIONS": [
+      "在你的回合，右键点击此遗物获得 #b{0} 层 #y影身 。 NL CD #b{1} 回合。"
+    ]
+  },
+  "Dota2Spire:LotusOrb": {
+    "NAME": "清莲宝珠",
+    "FLAVOR": "位居中央的宝石依然能反射出其制造者苍白的景象。",
+    "DESCRIPTIONS": [
+      "在你的回合，右键点击此遗物获得一回合的 #y易伤 、 #y虚弱 反弹（你仍然会获得debuff）。 NL CD #b{0} 回合。"
+    ]
+  },
+  "Dota2Spire:LinkenSphere": {
+    "NAME": "林肯法球",
+    "FLAVOR": "这个有魔力的球体曾经保护了一位历史上最有名的英雄。",
+    "DESCRIPTIONS": [
+      "使下一个来自怪物的负面效果失效。 NL CD #b{0} 回合。"
+    ]
+  },
+  "Dota2Spire:HandOfMidas": {
+    "NAME": "迈达斯之手",
+    "FLAVOR": "以未知的魔法手段维持着的迈达斯之手，是件贪婪的武器，通过炼化生灵来装满持有者的腰包。",
+    "DESCRIPTIONS": [
+      "怪物（除了 #y爪牙 ）死亡时获得 #b{0} 金币。 NL CD #b{1} 回合。"
+    ]
+  },
+  "Dota2Spire:BattleFury": {
+    "NAME": "狂战斧",
+    "FLAVOR": "持有这把强大斧头的人可以一次砍倒一片敌人。",
+    "DESCRIPTIONS": [
+      "攻击额外对所有敌人造成本次攻击 #b{0}% 的伤害。"
+    ]
+  },
+  "Dota2Spire:UrnOfShadows": {
+    "NAME": "影之灵龛",
+    "FLAVOR": "内含强大恶魔的骨灰。",
+    "DESCRIPTIONS": [
+      "每 #b{0} 点可使用 #b1 次。 NL 在你的回合，右键点击此遗物获取 #b{1} #y血量恢复 和 #b{2} #y魔法恢复 。 NL 每个敌人死亡获得 #b1 点（除了 #y爪牙 ）。"
+    ]
+  },
+  "Dota2Spire:DrumOfEndurance": {
+    "NAME": "韧鼓",
+    "FLAVOR": "在危难时刻能鼓舞周围人士气的遗物。",
+    "DESCRIPTIONS": [
+      "共可使用 #b{0} 次。 NL 在你的回合，右键点击此遗物获取 #b{1} #y力量 和 #b{2} #y敏捷 。 NL 每场战斗限用一次。"
+    ]
+  },
+  "Dota2Spire:Bloodstone": {
+    "NAME": "血精石",
+    "FLAVOR": "血精石鲜红的色彩在战场上绝对不会被看错，拥有者似乎有无限的生命力和精力。",
+    "DESCRIPTIONS": [
+      "初始 #b{0} 点，当点数不小于 #b{1} 时，每回合开始时获得 [E] 。 NL 每当怪物死亡时， 点数 #b+1。 NL 每当你失去最大生命值 #b{2}% 的 #yHP ，点数 #b-1 。 NL 点数大于 #b1 时，在你的回合，右键点击此遗物失去一半点数，每点失去的恢复 #b1  [E] 和 #b{3} #yHP 。 NL 每场战斗限用一次。"
+    ]
+  },
+  "Dota2Spire:RefresherOrb": {
+    "NAME": "刷新球",
+    "FLAVOR": "一件为巫师量身定做的强力物品。",
+    "DESCRIPTIONS": [
+      "非CD期间每回合开始时获得 [E] 。 NL 在你的回合，右键点击此遗物恢复 [E] 到最大值 并抽 #b{0} 张牌。 NL CD #b{1} 回合。"
+    ]
+  },
+  "Dota2Spire:MonkeyKingBar": {
+    "NAME": "金箍棒",
+    "FLAVOR": "一位大师级战士使用的强力棍棒。",
+    "DESCRIPTIONS": [
+      "攻击额外造成 #b{0} 伤害。"
+    ]
+  },
+  "Dota2Spire:Vanguard": {
+    "NAME": "先锋盾",
+    "FLAVOR": "能够让持有者躲过最致命攻击的强力盾牌。",
+    "DESCRIPTIONS": [
+      "在你的回合第一次获得 #y格挡 时额外获得 #b{0} 点。"
+    ]
+  },
+  "Dota2Spire:BladeMail": {
+    "NAME": "刃甲",
+    "FLAVOR": "覆盖着尖锐剃刀的盔甲，战斗中可以用来做出不顾自身安危的烈士行为。",
+    "DESCRIPTIONS": [
+      "在你的回合，右键点击此遗物翻倍你当前的 #y荆棘 ，然后获得 #b{0} #y荆棘 和 #b{1} #y格挡 ，下回合开始时移除你所有 #y荆棘 。 NL CD #b{2} 回合。"
+    ]
+  },
+  "Dota2Spire:ArmletOfMordiggian": {
+    "NAME": "莫尔迪基安的臂章",
+    "FLAVOR": "能让你成为野兽的武器，持有者牺牲自己的生命能量来获得巨大力量。",
+    "DESCRIPTIONS": [
+      "在你的回合，右键点击此遗物激活臂章。 NL 臂章激活状态下获得 #b{0} #y力量 ，每回合失去 #b{1} #yHP 。 NL 战斗结束后自动关闭。"
+    ]
+  },
+  "Dota2Spire:Dagon": {
+    "NAME": "达贡",
+    "FLAVOR": "越用威力就越大的次级法杖，让持有者的魔法从指尖喷涌而出。",
+    "DESCRIPTIONS": [
+      "战斗开始时，将一张 #y达贡之神力 洗入你的抽牌堆。 NL 在商店，右键点击此遗物花费 #b{0} 金币升级。 NL 最高升到 #b{1} 级。"
+    ]
+  },
+  "Dota2Spire:CrimsonGuard": {
+    "NAME": "赤红甲",
+    "FLAVOR": "原为抵御可怕的年兽所打造的铠甲。",
+    "DESCRIPTIONS": [
+      "在你的回合，右键点击此遗物持续 #b{0} 回合获得 #b{1} #y护甲 。 NL CD #b{2} 回合。"
+    ]
+  },
+  "Dota2Spire:ShivaGuard": {
+    "NAME": "希瓦的守护",
+    "FLAVOR": "据说曾经属于某位女神，至今仍保持大部分神力。",
+    "DESCRIPTIONS": [
+      "每当你获得 #y格挡 时，额外获得 #b{0} 点。 NL 获得 #y格挡 时给与所有敌人 #b{1} #y虚弱 ，CD #b{2} 回合。"
+    ]
+  },
+  "Dota2Spire:AssaultCuirass": {
+    "NAME": "强袭胸甲",
+    "FLAVOR": "在幽冥地带的深渊锻造，这件地狱盔甲提高整支军队的护甲和攻击速度。",
+    "DESCRIPTIONS": [
+      "每当你获得 #y格挡 时，额外获得 #b{0} 点。 NL 获得 #y格挡 时给与所有敌人 #b{1} #y易伤 ，CD #b{2} 回合。"
+    ]
+  },
+  "Dota2Spire:MantaStyle": {
+    "NAME": "幻影斧",
+    "FLAVOR": "用反光材料制成的斧头，能够混淆敌军。",
+    "DESCRIPTIONS": [
+      "在你的回合，右键点击此遗物从你的 #y消耗 牌堆中随机抽取一张到你的手上（不会抽到 #r状态 牌和 #r诅咒 牌）。 NL CD #b{0} 回合。"
+    ]
+  }
+}

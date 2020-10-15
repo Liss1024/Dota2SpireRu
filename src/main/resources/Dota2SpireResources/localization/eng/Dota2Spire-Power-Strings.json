@@ -1,0 +1,26 @@
+{
+  "Dota2Spire:HpRecovery": {
+    "NAME": "Hp Recovery",
+    "DESCRIPTIONS": [
+      "Gain #b3 Hp at end of your turn, every round #b-1 , Remove when you take damage."
+    ]
+  },
+  "Dota2Spire:MpRecovery": {
+    "NAME": "Mp Recovery",
+    "DESCRIPTIONS": [
+      "Gain [E] at start of your turn, every round #b-1 , Remove when you take damage."
+    ]
+  },
+  "Dota2Spire:Lifesteal": {
+    "NAME": "Lifesteal",
+    "DESCRIPTIONS": [
+      "Heals the attacker for #b1%*Stack of attack damage dealt, Remove at end of turn."
+    ]
+  },
+  "Dota2Spire:Invisibility": {
+    "NAME": "Invisibility",
+    "DESCRIPTIONS": [
+      "Reduce damage to half when you have #yinvisibility, your next card damage gain #b+50% up. Remove when you attack, every round #b-1 ."
+    ]
+  }
+}
