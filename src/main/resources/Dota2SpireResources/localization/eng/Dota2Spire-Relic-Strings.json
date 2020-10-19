@@ -3,14 +3,14 @@
     "NAME": "Echo Sabre",
     "FLAVOR": "A deceptively swift blade imbued with resonant magic.",
     "DESCRIPTIONS": [
-      "Your next attack cards will be played two times. NL CD #b{0} rounds."
+      "Your next attack card will be played two times. NL CD #b{0} rounds."
     ]
   },
   "Dota2Spire:Butterfly": {
     "NAME": "Butterfly",
     "FLAVOR": "Only the mightiest and most experienced of warriors can wield the Butterfly, but it provides incredible dexterity in combat.",
     "DESCRIPTIONS": [
-      "At the start of combat, Gain #b{0} #yDexterity . NL  #b{1}% change to avoid damage."
+      "At the start of combat, Gain #b{0} #yDexterity . NL  #b{1}% chance to avoid damage."
     ]
   },
   "Dota2Spire:Desolator": {
@@ -42,8 +42,8 @@
     ]
   },
   "Dota2Spire:MaskOfMadness": {
-    "NAME": "疯狂面具",
-    "FLAVOR": "一旦戴上这个面具就会变成无法控制的好战分子。",
+    "NAME": "Mask Of Madness",
+    "FLAVOR": "Once this mask is worn, its bearer becomes an uncontrollable aggressive force.",
     "DESCRIPTIONS": [
       "In your turn, You can Right-click on this relic to gain  #b{0} #yLifesteal 和 #b{1} #yVulnerable , NL CD #b{2} rounds."
     ]
@@ -73,7 +73,7 @@
     "NAME": "Hand of Midas",
     "FLAVOR": "Preserved through unknown magical means, the Hand of Midas is a weapon of greed, sacrificing animals to line the owner's pockets.",
     "DESCRIPTIONS": [
-      "when enemy (Except  #yminions ) died, gain #b{0} gold. NL CD #b{1} rounds."
+      "When enemy (Except  #yminions ) died, gain #b{0} gold. NL CD #b{1} rounds."
     ]
   },
   "Dota2Spire:BattleFury": {
@@ -105,8 +105,8 @@
     ]
   },
   "Dota2Spire:RefresherOrb": {
-    "NAME": "刷新球",
-    "FLAVOR": "一件为巫师量身定做的强力物品。",
+    "NAME": "Refresher Orb",
+    "FLAVOR": "A powerful artifact created for wizards.",
     "DESCRIPTIONS": [
       "Gain [E] at the start of each turn when not in CD. NL In your turn, You can Right-click on this relic to gei [E] to Max and draw #b{0} cards. NL CD #b{1} rounds."
     ]
@@ -172,6 +172,55 @@
     "FLAVOR": "An axe made of reflective materials that causes confusion amongst enemy ranks.",
     "DESCRIPTIONS": [
       "In your turn, You can Right-click on this relic to copy a random card witch in your #yExhaust pile into your hand(Will not copy #rStatus card or #rCurse card). NL CD #b{0} rounds。"
+    ]
+  },
+  "Dota2Spire:EyeOfSkadi": {
+    "NAME": "Eye of Skadi",
+    "FLAVOR": "Extremely rare artifact, guarded by the azure dragons.",
+    "DESCRIPTIONS": [
+      "Gain #b{0} max HP when you pick up. NL At the start of combat, Gain #b{0} #yStrength , #b{0} #yDexterity . NL Give #b{0} #yWeak to enemy when you attack him at the first time in this combat."
+    ]
+  },
+  "Dota2Spire:Mjollnir": {
+    "NAME": "Mjollnir",
+    "FLAVOR": "Thor's magical hammer, made for him by the dwarves Brok and Eitri.",
+    "DESCRIPTIONS": [
+      "When use attack card, each enemy have #b50% chance to get #b{0} additional damage."
+    ]
+  },
+  "Dota2Spire:DivineRapier": {
+    "NAME": "Divine Rapier",
+    "FLAVOR": "So powerful, it cannot have a single owner.",
+    "DESCRIPTIONS": [
+      "Attacks deal #b{0} additional damage. NL At the start of combat, Gain #b{1} #yVulnerable , #b{2} #yFrail ."
+    ]
+  },
+  "Dota2Spire:BlackKingBar": {
+    "NAME": "Black King Bar",
+    "FLAVOR": "A powerful staff imbued with the strength of giants.",
+    "DESCRIPTIONS": [
+      "Remove all debuff. NL CD #b{0} round."
+    ]
+  },
+  "Dota2Spire:PhaseBoots": {
+    "NAME": "Phase Boots",
+    "FLAVOR": "Boots that allow the wearer to travel between the ether.",
+    "DESCRIPTIONS": [
+      "In your turn, When you play #b{0} #ySkill card continued, Draw {1} Card."
+    ]
+  },
+  "Dota2Spire:PowerTreads": {
+    "NAME": "Power Treads",
+    "FLAVOR": "A pair of tough-skinned boots that change to meet the demands of the wearer.",
+    "DESCRIPTIONS": [
+      "In your turn, When you play #b{0} #yAttack card continued, Draw {1} Card."
+    ]
+  },
+  "Dota2Spire:OctarineCore": {
+    "NAME": "Octarine Core",
+    "FLAVOR": "At the core of spellcraft are spectrums only the very gifted can sense.",
+    "DESCRIPTIONS": [
+      "In your turn, When you play #b{0} #yAttack card continued, One random #ySkill card int your hand free to play once. NL When you play #b{0} #ySkill card continued, One random #yAttack card int your hand free to play once."
     ]
   }
 }

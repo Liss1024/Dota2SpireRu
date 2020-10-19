@@ -22,7 +22,7 @@ public class AssaultCuirass extends CustomRelic {
 
     private static final int _CD = 3;
     private static final int _VulnerableStack = 1;
-    private static final int _Block = 1;
+    private static final int _Block = 2;
 
     public AssaultCuirass() {
 //        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);

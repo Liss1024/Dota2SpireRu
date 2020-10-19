@@ -22,7 +22,7 @@ public class ShivaGuard extends CustomRelic {
 
     private static final int _CD = 3;
     private static final int _WeakStack = 1;
-    private static final int _Block = 1;
+    private static final int _Block = 2;
 
     public ShivaGuard() {
 //        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);

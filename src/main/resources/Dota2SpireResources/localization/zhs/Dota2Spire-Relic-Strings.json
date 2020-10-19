@@ -173,5 +173,54 @@
     "DESCRIPTIONS": [
       "在你的回合，右键点击此遗物从你的 #y消耗 牌堆中随机抽取一张到你的手上（不会抽到 #r状态 牌和 #r诅咒 牌）。 NL CD #b{0} 回合。"
     ]
+  },
+  "Dota2Spire:EyeOfSkadi": {
+    "NAME": "斯嘉蒂之眼",
+    "FLAVOR": "极度罕见的古物，由苍空之龙看管。",
+    "DESCRIPTIONS": [
+      "拾取时最大生命值 #b+{0} 。 NL 战斗开始时，获得 #b{1} 点 #y力量 ， #b{2} 点 #y敏捷 。 NL 第一次对敌人攻击时，给与 #b{3} 层 #y虚弱。"
+    ]
+  },
+  "Dota2Spire:Mjollnir": {
+    "NAME": "雷神之锤",
+    "FLAVOR": "索尔的魔法之锤，由矮人名匠布鲁克和艾崔打造。",
+    "DESCRIPTIONS": [
+      "使用攻击牌时，所有敌人都有 #b50% 几率受到 #b{0} 点额外伤害"
+    ]
+  },
+  "Dota2Spire:DivineRapier": {
+    "NAME": "圣剑",
+    "FLAVOR": "它强横无匹，并不满足于侍奉唯一的主人。",
+    "DESCRIPTIONS": [
+      "攻击额外造成 #b{0} 伤害。 NL 战斗开始时，获得 #b{1} 点 #y易伤 ， #b{2} 点 #y脆弱 。"
+    ]
+  },
+  "Dota2Spire:BlackKingBar": {
+    "NAME": "黑皇杖",
+    "FLAVOR": "渗透了巨人之力的强大法杖。",
+    "DESCRIPTIONS": [
+      "消除你所有负面buff。 NL CD #b{0} 回合。"
+    ]
+  },
+  "Dota2Spire:PhaseBoots": {
+    "NAME": "相位鞋",
+    "FLAVOR": "穿着它的人可以穿越虚空。",
+    "DESCRIPTIONS": [
+      "在你的回合，你每连续打出 #b{0} 张 #y技能牌 ，抽一张牌。"
+    ]
+  },
+  "Dota2Spire:PowerTreads": {
+    "NAME": "动力鞋",
+    "FLAVOR": "一双厚实的皮靴，能根据穿着者的需求切换属性。",
+    "DESCRIPTIONS": [
+      "在你的回合，你每连续打出 #b{0} 张 #y攻击牌 ，抽一张牌。"
+    ]
+  },
+  "Dota2Spire:OctarineCore": {
+    "NAME": "玲珑心",
+    "FLAVOR": "位于法术技艺核心的，是只有身负异能之人才能感知的光带。",
+    "DESCRIPTIONS": [
+      "在你的回合，你每连续打出 #b{0} 张 #y攻击牌 ，你手牌中的一张随机 #y技能牌 可免费打出一次。 NL 你每连续打出 #b{0} 张 #y技能牌 ，你手牌中的一张随机 #y攻击牌 可免费打出一次。"
+    ]
   }
 }

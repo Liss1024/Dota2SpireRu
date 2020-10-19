@@ -54,7 +54,7 @@ public class CrimsonGuard extends CustomRelic implements ClickableRelic {
 
     private void setCount(int count) {
         if (count <= 0) {
-            this.counter = 0;
+            this.counter = -1;
             flash();
             beginLongPulse();
         } else {

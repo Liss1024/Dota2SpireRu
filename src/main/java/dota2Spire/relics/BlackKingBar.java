@@ -3,35 +3,30 @@ package dota2Spire.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import dota2Spire.Dota2Spire;
-import dota2Spire.powers.Invisibility;
-import dota2Spire.powers.Lifesteal;
 import dota2Spire.util.StringUtil;
 import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
-public class ShadowBlade extends CustomRelic implements ClickableRelic {
+public class BlackKingBar extends CustomRelic implements ClickableRelic {
     // ID, images, text.
-    public static final String ID = Dota2Spire.makeID("ShadowBlade");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ShadowBlade.png"));
+    public static final String ID = Dota2Spire.makeID("BlackKingBar");
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BlackKingBar.png"));
     //    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
     private boolean isPlayerTurn = false;
 
-    private static final int _CD = 4;
-    private static final int _BuffStack = 2;
+    private static final int _CD = 7;
 
-
-    public ShadowBlade() {
+    public BlackKingBar() {
 //        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
-        super(ID, IMG, RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, IMG, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
     @Override
@@ -49,10 +44,11 @@ public class ShadowBlade extends CustomRelic implements ClickableRelic {
         }
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new Invisibility(AbstractDungeon.player, _BuffStack), _BuffStack));
-
+        for (AbstractPower power : AbstractDungeon.player.powers) {
+            if (power.type == AbstractPower.PowerType.DEBUFF) {
+                addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, power));
+            }
+        }
         setCount(_CD);
     }
 
@@ -76,17 +72,16 @@ public class ShadowBlade extends CustomRelic implements ClickableRelic {
     @Override
     public void onPlayerEndTurn() {
         isPlayerTurn = false;
-        stopPulse();
     }
 
     @Override
     public String getUpdatedDescription() {
-        return StringUtil.format(DESCRIPTIONS[0], _BuffStack, _CD);
+        return StringUtil.format(this.DESCRIPTIONS[0], _CD);
     }
 
     @Override
     public AbstractRelic makeCopy() {
-        return new ShadowBlade();
+        return new BlackKingBar();
     }
 
 }

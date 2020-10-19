@@ -40,7 +40,8 @@ public class HeartOfTarrasque extends CustomRelic {
 
     private void setCount(int count) {
         if (count <= 0) {
-            this.counter = 0;
+            this.counter = -1;
+            flash();
             beginLongPulse();
         } else {
             this.counter = count;
@@ -58,7 +59,7 @@ public class HeartOfTarrasque extends CustomRelic {
 
     @Override
     public void atTurnStart() {
-        if (this.counter == 0) {
+        if (this.counter <= 0) {
             this.flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractDungeon.player.heal(_HP);

@@ -18,7 +18,7 @@ public class Vanguard extends CustomRelic {
 //    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
 
     private boolean active = false;
-    private static final int _Block = 3;
+    private static final int _Block = 4;
 
     public Vanguard() {
 //        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);

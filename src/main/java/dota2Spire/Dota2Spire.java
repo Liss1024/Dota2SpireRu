@@ -15,6 +15,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -119,6 +120,44 @@ public class Dota2Spire implements EditRelicsSubscriber, EditCardsSubscriber,
         BaseMod.addRelic(new ShivaGuard(), RelicType.SHARED);
         BaseMod.addRelic(new AssaultCuirass(), RelicType.SHARED);
         BaseMod.addRelic(new MantaStyle(), RelicType.SHARED);
+        BaseMod.addRelic(new Mjollnir(), RelicType.SHARED);
+        BaseMod.addRelic(new EyeOfSkadi(), RelicType.SHARED);
+        BaseMod.addRelic(new DivineRapier(), RelicType.SHARED);
+        BaseMod.addRelic(new BlackKingBar(), RelicType.SHARED);
+        BaseMod.addRelic(new PhaseBoots(), RelicType.SHARED);
+        BaseMod.addRelic(new PowerTreads(), RelicType.SHARED);
+        BaseMod.addRelic(new OctarineCore(), RelicType.SHARED);
+
+        System.out.println("Dota2Spire relic start");
+
+        RelicLibrary.commonList.forEach(it -> {
+            if (it.relicId.startsWith("Dota2Spire")) {
+                System.out.println(it.name + " (" + it.tier.toString() + ")");
+                System.out.println(it.getUpdatedDescription().replaceAll("#y", "").replaceAll("#r", "").replaceAll("#b", "").replaceAll(" NL ", ""));
+                System.out.println();
+            }
+        });
+        RelicLibrary.uncommonList.forEach(it -> {
+            if (it.relicId.startsWith("Dota2Spire")) {
+                System.out.println(it.name + " (" + it.tier.toString() + ")");
+                System.out.println(it.getUpdatedDescription().replaceAll("#y", "").replaceAll("#r", "").replaceAll("#b", "").replaceAll(" NL ", ""));
+                System.out.println();
+            }
+        });
+        RelicLibrary.rareList.forEach(it -> {
+            if (it.relicId.startsWith("Dota2Spire")) {
+                System.out.println(it.name + " (" + it.tier.toString() + ")");
+                System.out.println(it.getUpdatedDescription().replaceAll("#y", "").replaceAll("#r", "").replaceAll("#b", "").replaceAll(" NL ", ""));
+                System.out.println();
+            }
+        });
+        RelicLibrary.bossList.forEach(it -> {
+            if (it.relicId.startsWith("Dota2Spire")) {
+                System.out.println(it.name + " (" + it.tier.toString() + ")");
+                System.out.println(it.getUpdatedDescription().replaceAll("#y", "").replaceAll("#r", "").replaceAll("#b", "").replaceAll(" NL ", ""));
+                System.out.println();
+            }
+        });
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
         UnlockTracker.markRelicAsSeen(EchoSabre.ID);
@@ -146,6 +185,13 @@ public class Dota2Spire implements EditRelicsSubscriber, EditCardsSubscriber,
         UnlockTracker.markRelicAsSeen(ShivaGuard.ID);
         UnlockTracker.markRelicAsSeen(AssaultCuirass.ID);
         UnlockTracker.markRelicAsSeen(MantaStyle.ID);
+        UnlockTracker.markRelicAsSeen(Mjollnir.ID);
+        UnlockTracker.markRelicAsSeen(EyeOfSkadi.ID);
+        UnlockTracker.markRelicAsSeen(DivineRapier.ID);
+        UnlockTracker.markRelicAsSeen(BlackKingBar.ID);
+        UnlockTracker.markRelicAsSeen(PhaseBoots.ID);
+        UnlockTracker.markRelicAsSeen(PowerTreads.ID);
+        UnlockTracker.markRelicAsSeen(OctarineCore.ID);
         logger.info("Done adding relics!");
 
         receiveEditPotions();
@@ -154,7 +200,7 @@ public class Dota2Spire implements EditRelicsSubscriber, EditCardsSubscriber,
     private void receiveEditPotions() {
         logger.info("Beginning to edit potions");
 
-        BaseMod.addPotion(HealingSalve.class, CardHelper.getColor(0, 255, 127), CardHelper.getColor(165, 42, 42), CardHelper.getColor(165, 42, 42), HealingSalve.POTION_ID);
+        BaseMod.addPotion(HealingSalve.class, CardHelper.getColor(0, 255, 127), CardHelper.getColor(245, 245, 220), CardHelper.getColor(245, 245, 220), HealingSalve.POTION_ID);
         BaseMod.addPotion(Clarity.class, CardHelper.getColor(0, 191, 255), CardHelper.getColor(245, 245, 220), CardHelper.getColor(245, 245, 220), Clarity.POTION_ID);
 
         logger.info("Done editing potions");

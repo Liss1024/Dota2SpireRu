@@ -39,6 +39,7 @@ public class Satanic extends CustomRelic implements ClickableRelic {
 
     @Override
     public void atBattleStart() {
+        addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, _StrengthStack), _StrengthStack));
     }
 
@@ -60,7 +61,8 @@ public class Satanic extends CustomRelic implements ClickableRelic {
 
     private void setCount(int count) {
         if (count <= 0) {
-            this.counter = 0;
+            this.counter = -1;
+            flash();
             beginLongPulse();
         } else {
             this.counter = count;

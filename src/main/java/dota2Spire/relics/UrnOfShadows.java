@@ -26,7 +26,7 @@ public class UrnOfShadows extends CustomRelic implements ClickableRelic {
     private boolean usedThisTurn = false;
     private boolean isPlayerTurn = false;
 
-    private static final int _UsePoint = 3;
+    private static final int _UsePoint = 2;
     private static final int _HpRecovery = 2;
     private static final int _MpRecovery = 1;
 
@@ -37,7 +37,7 @@ public class UrnOfShadows extends CustomRelic implements ClickableRelic {
 
     @Override
     public void onEquip() {
-        this.counter = 0;
+        this.counter = 2;
     }
 
     @Override
