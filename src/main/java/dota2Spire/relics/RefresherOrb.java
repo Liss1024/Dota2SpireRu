@@ -86,7 +86,7 @@ public class RefresherOrb extends CustomRelic implements ClickableRelic {
 
     @Override
     public void atBattleStart() {
-        if (this.counter > 0) {
+        if (this.counter <= 0) {
             beginLongPulse();
         }
     }

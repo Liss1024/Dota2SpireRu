@@ -38,7 +38,7 @@ public class MpRecovery extends AbstractPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type != DamageInfo.DamageType.HP_LOSS && damageAmount > 0) {
+        if (info.type != DamageInfo.DamageType.HP_LOSS && damageAmount > 10) {
             changeAmount(0);
         }
         return super.onAttacked(info, damageAmount);

@@ -94,7 +94,7 @@
     "NAME": "韧鼓",
     "FLAVOR": "在危难时刻能鼓舞周围人士气的遗物。",
     "DESCRIPTIONS": [
-      "共可使用 #b{0} 次。 NL 在你的回合，右键点击此遗物获取 #b{1} #y力量 和 #b{2} #y敏捷 。 NL 每场战斗限用一次。"
+      "战斗开始时随机获得 #b{1} #y力量 或 #b{2} #y敏捷 。 NL 共可使用 #b{0} 次。 NL 在你的回合，右键点击此遗物获取 #b{1} #y力量 和 #b{2} #y敏捷 。 NL 每场战斗限用一次。"
     ]
   },
   "Dota2Spire:Bloodstone": {
@@ -199,21 +199,21 @@
     "NAME": "黑皇杖",
     "FLAVOR": "渗透了巨人之力的强大法杖。",
     "DESCRIPTIONS": [
-      "消除你所有负面buff。 NL CD #b{0} 回合。"
+      "在你的回合，右键点击此遗物消除你所有负面buff。 NL CD #b{0} 回合。"
     ]
   },
   "Dota2Spire:PhaseBoots": {
     "NAME": "相位鞋",
     "FLAVOR": "穿着它的人可以穿越虚空。",
     "DESCRIPTIONS": [
-      "在你的回合，你每连续打出 #b{0} 张 #y技能牌 ，抽一张牌。"
+      "在你的回合，你每连续打出 #b{0} 张 #y技能牌 ，抽 #b{1} 张牌。"
     ]
   },
   "Dota2Spire:PowerTreads": {
     "NAME": "动力鞋",
     "FLAVOR": "一双厚实的皮靴，能根据穿着者的需求切换属性。",
     "DESCRIPTIONS": [
-      "在你的回合，你每连续打出 #b{0} 张 #y攻击牌 ，抽一张牌。"
+      "在你的回合，你每连续打出 #b{0} 张 #y攻击牌 ，抽 #b{1} 张牌。"
     ]
   },
   "Dota2Spire:OctarineCore": {
@@ -221,6 +221,34 @@
     "FLAVOR": "位于法术技艺核心的，是只有身负异能之人才能感知的光带。",
     "DESCRIPTIONS": [
       "在你的回合，你每连续打出 #b{0} 张 #y攻击牌 ，你手牌中的一张随机 #y技能牌 可免费打出一次。 NL 你每连续打出 #b{0} 张 #y技能牌 ，你手牌中的一张随机 #y攻击牌 可免费打出一次。"
+    ]
+  },
+  "Dota2Spire:AghanimScepter": {
+    "NAME": "阿哈利姆神杖",
+    "FLAVOR": "这把权杖属于拥有半神之力的法师。",
+    "DESCRIPTIONS": [
+      "每场战斗的第一张 #y能力 牌会使用两次。"
+    ]
+  },
+  "Dota2Spire:OrchidMalevolence": {
+    "NAME": "紫怨",
+    "FLAVOR": "一颗诞自火焰恶魔精华的榴石。",
+    "DESCRIPTIONS": [
+      "每当你使用 #y能力 牌，给与随机敌人 #b{0} #y易伤 。"
+    ]
+  },
+  "Dota2Spire:EtherealBlade": {
+    "NAME": "虚灵之刃",
+    "FLAVOR": "一把忽隐忽现的阴森刀刃，可以在物理和魔法两个位面造成伤害。",
+    "DESCRIPTIONS": [
+      "每当你使用 #y能力 牌，给与随机敌人 #b{0} #y虚弱 。"
+    ]
+  },
+  "Dota2Spire:ArcaneBoots": {
+    "NAME": "奥术鞋",
+    "FLAVOR": "装备这种鞋子的法师在战斗中值得重视。 ",
+    "DESCRIPTIONS": [
+      "你每打出 #b{0} 张 #y能力 牌，抽 #b{1} 张牌并获得 #b{2} [E] 。"
     ]
   }
 }

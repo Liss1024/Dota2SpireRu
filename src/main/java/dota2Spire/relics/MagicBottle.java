@@ -26,7 +26,7 @@ public class MagicBottle extends CustomRelic implements ClickableRelic {
     private boolean isPlayerTurn = false;
 
     private static final int _HpRecovery = 3;
-    private static final int _MpRecovery = 2;
+    private static final int _MpRecovery = 3;
     private static final int _MaxPoint = 2;
 
     public MagicBottle() {

@@ -8,7 +8,7 @@
       "Hp Recovery",
       "Hp_Recovery"
     ],
-    "DESCRIPTION": "Gain #b3 Hp at end of your turn, every round #b-1 , Remove when you take damage."
+    "DESCRIPTION": "Gain #b3 Hp at end of your turn, every round #b-1 , Remove when you take more than #b10 damage one time."
   },
   {
     "PROPER_NAME": "MP Recovery",
@@ -19,7 +19,7 @@
       "Mp Recovery",
       "Mp_Recovery"
     ],
-    "DESCRIPTION": "Gain [E] at start of your turn, every round #b-1 , Remove when you take damage."
+    "DESCRIPTION": "Gain [E] at start of your turn, every round #b-1 , Remove when you take more than #b10 damage one time."
   },
   {
     "PROPER_NAME": "Lifesteal",

@@ -28,7 +28,7 @@ public class UrnOfShadows extends CustomRelic implements ClickableRelic {
 
     private static final int _UsePoint = 2;
     private static final int _HpRecovery = 2;
-    private static final int _MpRecovery = 1;
+    private static final int _MpRecovery = 2;
 
     public UrnOfShadows() {
 //        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);

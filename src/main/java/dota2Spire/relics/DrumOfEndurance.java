@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -13,6 +14,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import dota2Spire.Dota2Spire;
 import dota2Spire.util.StringUtil;
 import dota2Spire.util.TextureLoader;
+
+import java.util.Random;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
@@ -64,6 +67,14 @@ public class DrumOfEndurance extends CustomRelic implements ClickableRelic {
 
     @Override
     public void atBattleStart() {
+        flash();
+        addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        Random random = new Random(Settings.seed + AbstractDungeon.floorNum);
+        if (random.nextDouble() <= 0.5f) {
+            addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, _Str), _Str));
+        } else {
+            addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, _Dex), _Dex));
+        }
         usedThisBattle = false;
         if (this.counter > 0) {
             beginLongPulse();

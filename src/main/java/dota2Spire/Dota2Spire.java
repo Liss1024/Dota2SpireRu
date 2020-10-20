@@ -127,6 +127,10 @@ public class Dota2Spire implements EditRelicsSubscriber, EditCardsSubscriber,
         BaseMod.addRelic(new PhaseBoots(), RelicType.SHARED);
         BaseMod.addRelic(new PowerTreads(), RelicType.SHARED);
         BaseMod.addRelic(new OctarineCore(), RelicType.SHARED);
+        BaseMod.addRelic(new AghanimScepter(), RelicType.SHARED);
+        BaseMod.addRelic(new OrchidMalevolence(), RelicType.SHARED);
+        BaseMod.addRelic(new EtherealBlade(), RelicType.SHARED);
+        BaseMod.addRelic(new ArcaneBoots(), RelicType.SHARED);
 
         System.out.println("Dota2Spire relic start");
 
@@ -192,6 +196,10 @@ public class Dota2Spire implements EditRelicsSubscriber, EditCardsSubscriber,
         UnlockTracker.markRelicAsSeen(PhaseBoots.ID);
         UnlockTracker.markRelicAsSeen(PowerTreads.ID);
         UnlockTracker.markRelicAsSeen(OctarineCore.ID);
+        UnlockTracker.markRelicAsSeen(AghanimScepter.ID);
+        UnlockTracker.markRelicAsSeen(OrchidMalevolence.ID);
+        UnlockTracker.markRelicAsSeen(EtherealBlade.ID);
+        UnlockTracker.markRelicAsSeen(ArcaneBoots.ID);
         logger.info("Done adding relics!");
 
         receiveEditPotions();

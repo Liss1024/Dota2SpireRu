@@ -94,7 +94,7 @@
     "NAME": "Drum of Endurance",
     "FLAVOR": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
     "DESCRIPTIONS": [
-      "It can be used for #b{0} times. NL In your turn, You can Right-click on this relic to gain #b{1} #yStrength 和 #b{2} #yDexterity . NL Only can be used once each combat."
+      "At the start of combat, Gain #b{1} #yStrength or #b{2} #yDexterity . NL It can be used for #b{0} times. NL In your turn, You can Right-click on this relic to gain #b{1} #yStrength and #b{2} #yDexterity . NL Only can be used once each combat."
     ]
   },
   "Dota2Spire:Bloodstone": {
@@ -199,21 +199,21 @@
     "NAME": "Black King Bar",
     "FLAVOR": "A powerful staff imbued with the strength of giants.",
     "DESCRIPTIONS": [
-      "Remove all debuff. NL CD #b{0} round."
+      "In your turn, You can Right-click on this relic to remove all debuff. NL CD #b{0} round."
     ]
   },
   "Dota2Spire:PhaseBoots": {
     "NAME": "Phase Boots",
     "FLAVOR": "Boots that allow the wearer to travel between the ether.",
     "DESCRIPTIONS": [
-      "In your turn, When you play #b{0} #ySkill card continued, Draw {1} Card."
+      "In your turn, When you play #b{0} #ySkill card continued, Draw #b{1} Card."
     ]
   },
   "Dota2Spire:PowerTreads": {
     "NAME": "Power Treads",
     "FLAVOR": "A pair of tough-skinned boots that change to meet the demands of the wearer.",
     "DESCRIPTIONS": [
-      "In your turn, When you play #b{0} #yAttack card continued, Draw {1} Card."
+      "In your turn, When you play #b{0} #yAttack card continued, Draw #b{1} Card."
     ]
   },
   "Dota2Spire:OctarineCore": {
@@ -221,6 +221,34 @@
     "FLAVOR": "At the core of spellcraft are spectrums only the very gifted can sense.",
     "DESCRIPTIONS": [
       "In your turn, When you play #b{0} #yAttack card continued, One random #ySkill card int your hand free to play once. NL When you play #b{0} #ySkill card continued, One random #yAttack card int your hand free to play once."
+    ]
+  },
+  "Dota2Spire:AghanimScepter": {
+    "NAME": "Aghanim's Scepter",
+    "FLAVOR": "The scepter of a wizard with demigod-like powers.",
+    "DESCRIPTIONS": [
+      "The first #yPower card you play each combat will played twice."
+    ]
+  },
+  "Dota2Spire:OrchidMalevolence": {
+    "NAME": "Orchid Malevolence",
+    "FLAVOR": "A garnet rod constructed from the essence of a fire demon.",
+    "DESCRIPTIONS": [
+      "When you use #yPower card, Give random enemy #b{0} #yVulnerable ."
+    ]
+  },
+  "Dota2Spire:EtherealBlade": {
+    "NAME": "Ethereal Blade",
+    "FLAVOR": "A flickering blade of a ghastly nature, it is capable of dealing damage in both magical and physical planes.",
+    "DESCRIPTIONS": [
+      "When you use #yPower card, Give random enemy #b{0} #yWeak ."
+    ]
+  },
+  "Dota2Spire:ArcaneBoots": {
+    "NAME": "Arcane Boots",
+    "FLAVOR": "Magi equipped with these boots are valued in battle.",
+    "DESCRIPTIONS": [
+      "When you play #b{0} #yPower card, Draw #b{1} Card and gain #b{2} [E] ."
     ]
   }
 }

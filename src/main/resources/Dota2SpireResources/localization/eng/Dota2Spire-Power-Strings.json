@@ -2,13 +2,13 @@
   "Dota2Spire:HpRecovery": {
     "NAME": "Hp Recovery",
     "DESCRIPTIONS": [
-      "Gain #b3 Hp at end of your turn, every round #b-1 , Remove when you take damage."
+      "Gain #b3 Hp at end of your turn, every round #b-1 , Remove when you take more than #b10 damage one time."
     ]
   },
   "Dota2Spire:MpRecovery": {
     "NAME": "Mp Recovery",
     "DESCRIPTIONS": [
-      "Gain [E] at start of your turn, every round #b-1 , Remove when you take damage."
+      "Gain [E] at start of your turn, every round #b-1 , Remove when you take more than #b10 damage one time."
     ]
   },
   "Dota2Spire:Lifesteal": {

@@ -6,9 +6,9 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,52 +24,57 @@ import java.util.Random;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
-public class Mjollnir extends CustomRelic {
+public class AghanimScepter extends CustomRelic {
     // ID, images, text.
-    public static final String ID = Dota2Spire.makeID("Mjollnir");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Mjollnir.png"));
+    public static final String ID = Dota2Spire.makeID("AghanimScepter");
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("AghanimScepter.png"));
 //    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
 
-    private static final int _Damage = 4;
-    public static Random random;
+    private boolean used = false;
 
-    public Mjollnir() {
+    public AghanimScepter() {
 //        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
-        super(ID, IMG, RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, IMG, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
     @Override
     public void atBattleStart() {
-        random = new Random(Settings.seed + AbstractDungeon.floorNum);
+        used = false;
     }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK) {
-            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (m.currentHealth > 0 && roll()) {
-                    addToBot(new RelicAboveCreatureAction(m, this));
-                    this.addToTop(new VFXAction(new LightningEffect(m.drawX, m.drawY)));
-                    this.addToTop(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.LIGHTNING)));
-                    addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player, _Damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
-                }
+        if (!used && card.type == AbstractCard.CardType.POWER) {
+            this.flash();
+            AbstractMonster m = null;
+            if (action.target != null) {
+                m = (AbstractMonster) action.target;
             }
+
+            AbstractCard tmp = card.makeSameInstanceOf();
+            AbstractDungeon.player.limbo.addToBottom(tmp);
+            tmp.current_x = card.current_x;
+            tmp.current_y = card.current_y;
+            tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+            tmp.target_y = (float) Settings.HEIGHT / 2.0F;
+            if (m != null) {
+                tmp.calculateCardDamage(m);
+            }
+
+            tmp.purgeOnUse = true;
+            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
+            used = true;
         }
 
     }
 
-    private boolean roll() {
-        return random.nextDouble() <= 0.5;
-    }
-
-
     @Override
     public String getUpdatedDescription() {
-        return StringUtil.format(DESCRIPTIONS[0], _Damage);
+        return StringUtil.format(DESCRIPTIONS[0]);
     }
 
     @Override
     public AbstractRelic makeCopy() {
-        return new Mjollnir();
+        return new AghanimScepter();
     }
 }

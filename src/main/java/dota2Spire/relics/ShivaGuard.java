@@ -52,7 +52,9 @@ public class ShivaGuard extends CustomRelic {
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             if (this.counter <= 0) {
                 for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, _WeakStack, false), _WeakStack));
+                    if (m.currentHealth > 0) {
+                        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, _WeakStack, false), _WeakStack));
+                    }
                 }
                 setCount(_CD);
             }

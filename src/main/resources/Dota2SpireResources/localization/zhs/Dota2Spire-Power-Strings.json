@@ -2,13 +2,13 @@
   "Dota2Spire:HpRecovery": {
     "NAME": "血量恢复",
     "DESCRIPTIONS": [
-      "回合结束恢复 #b3 点血量。 NL 每回合 #b-1 层，受到攻击伤害消失。"
+      "回合结束恢复 #b3 点血量。 NL 每回合 #b-1 层，受到单次大于 #b10 点的攻击伤害消失。"
     ]
   },
   "Dota2Spire:MpRecovery": {
     "NAME": "魔法恢复",
     "DESCRIPTIONS": [
-      "回合开始获得 [E] 。 NL 每回合 #b-1 层，受到攻击伤害消失。"
+      "回合开始获得 [E] 。 NL 每回合 #b-1 层，受到单次大于 #b10 点的攻击伤害消失。"
     ]
   },
   "Dota2Spire:Lifesteal": {
