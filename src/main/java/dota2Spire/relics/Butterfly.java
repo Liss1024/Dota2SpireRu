@@ -33,6 +33,11 @@ public class Butterfly extends CustomRelic {
     }
 
     @Override
+    public void onEquip() {
+        random = new Random(Settings.seed + AbstractDungeon.floorNum);
+    }
+
+    @Override
     public void atBattleStart() {
         random = new Random(Settings.seed + AbstractDungeon.floorNum);
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));

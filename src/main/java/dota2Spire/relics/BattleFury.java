@@ -29,7 +29,7 @@ public class BattleFury extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BattleFury.png"));
 //    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
 
-    private static final int _DamagePercent = 20;
+    private static final int _DamagePercent = 25;
 
     public BattleFury() {
 //        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);

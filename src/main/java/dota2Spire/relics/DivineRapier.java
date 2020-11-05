@@ -22,8 +22,8 @@ public class DivineRapier extends CustomRelic {
 //    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
 
     private static final int _Damage = 6;
-    private static final int _VulnerableStack = 5;
-    private static final int _FrailStack = 5;
+    private static final int _VulnerableStack = 3;
+    private static final int _FrailStack = 3;
 
     public DivineRapier() {
 //        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);

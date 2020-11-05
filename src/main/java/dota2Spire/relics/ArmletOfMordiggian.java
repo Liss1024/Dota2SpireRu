@@ -34,7 +34,7 @@ public class ArmletOfMordiggian extends CustomRelic implements ClickableRelic {
 
     @Override
     public void onRightClick() {
-        if (!isObtained || !isPlayerTurn) {
+        if (!isObtained || !isPlayerTurn || isActive) {
             return;
         }
 
