@@ -23,13 +23,13 @@ public class Bloodstone extends CustomRelic implements ClickableRelic {
 
     private boolean usedThisBattle = false;
     private boolean isPlayerTurn = false;
-    private boolean energyEnable = false;
     private int loseHp = 0;
 
     private static final int _StartPoint = 5;
     private static final int _ThresholdPoint = 5;
     private static final int _HPPercent = 30;
     private static final int _HPHeal = 3;
+    private static final int _Energy = 1;
 
     public Bloodstone() {
 //        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
@@ -42,34 +42,12 @@ public class Bloodstone extends CustomRelic implements ClickableRelic {
             stopPulse();
         } else {
             this.counter = count;
-            if (this.counter >= _ThresholdPoint) {
-                if (!energyEnable) {
-                    ++AbstractDungeon.player.energy.energyMaster;
-                    ++AbstractDungeon.player.energy.energy;
-                    energyEnable = true;
-                }
-            } else {
-                if (energyEnable) {
-                    --AbstractDungeon.player.energy.energyMaster;
-                    --AbstractDungeon.player.energy.energy;
-                    energyEnable = false;
-                }
-            }
         }
     }
 
     @Override
     public void onEquip() {
         setCount(_StartPoint);
-    }
-
-    @Override
-    public void onUnequip() {
-        if (energyEnable) {
-            --AbstractDungeon.player.energy.energyMaster;
-            --AbstractDungeon.player.energy.energy;
-            energyEnable = false;
-        }
     }
 
     @Override
@@ -115,6 +93,7 @@ public class Bloodstone extends CustomRelic implements ClickableRelic {
     @Override
     public void atBattleStart() {
         usedThisBattle = false;
+        setCount(this.counter);
         if (this.counter > 0) {
             beginLongPulse();
         }
@@ -123,11 +102,12 @@ public class Bloodstone extends CustomRelic implements ClickableRelic {
     @Override
     public void atTurnStart() {
         isPlayerTurn = true;
-        if (this.counter > 0 && !usedThisBattle) {
-            beginLongPulse();
-        }
         if (this.counter >= _ThresholdPoint) {
             flash();
+            this.addToBot(new GainEnergyAction(_Energy));
+            if (!usedThisBattle){
+                beginLongPulse();
+            }
         }
 
     }

@@ -59,7 +59,7 @@ public class Mjollnir extends CustomRelic {
     }
 
     private boolean roll() {
-        return random.nextDouble() <= 0.5;
+        return random.nextDouble() <= 0.35;
     }
 
 

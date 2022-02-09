@@ -185,7 +185,7 @@
     "NAME": "Mjollnir",
     "FLAVOR": "Thor's magical hammer, made for him by the dwarves Brok and Eitri.",
     "DESCRIPTIONS": [
-      "When use attack card, each enemy have #b50% chance to get #b{0} additional damage."
+      "When use attack card, each enemy have #b35% chance to get #b{0} additional damage."
     ]
   },
   "Dota2Spire:DivineRapier": {
@@ -249,6 +249,13 @@
     "FLAVOR": "Magi equipped with these boots are valued in battle.",
     "DESCRIPTIONS": [
       "When you play #b{0} #yPower card, Draw #b{1} Card and gain #b{2} [E] ."
+    ]
+  },
+  "Dota2Spire:Radiance": {
+    "NAME": "Radiance",
+    "FLAVOR": "A divine weapon that causes damage and a bright burning effect that lays waste to nearby enemies.",
+    "DESCRIPTIONS": [
+      "At the end of the turn, Damage all enemies. (By the number of cards used in the turn + #b{0} )"
     ]
   }
 }

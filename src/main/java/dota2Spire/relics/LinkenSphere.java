@@ -34,7 +34,7 @@ public class LinkenSphere extends CustomRelic implements OnReceivePowerRelic {
 
     @Override
     public boolean onReceivePower(AbstractPower power, AbstractCreature source) {
-        if (this.counter == 0 && source != null && source != AbstractDungeon.player && power.type == AbstractPower.PowerType.DEBUFF) {
+        if (this.counter <=0  && source != null && source != AbstractDungeon.player && power.type == AbstractPower.PowerType.DEBUFF) {
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 

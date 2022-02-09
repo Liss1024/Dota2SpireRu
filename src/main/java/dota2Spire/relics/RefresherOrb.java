@@ -4,6 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -26,6 +27,7 @@ public class RefresherOrb extends CustomRelic implements ClickableRelic {
 
     private static final int _Draw = 3;
     private static final int _CD = 5;
+    private static final int _Energy = 1;
 
     public RefresherOrb() {
 //        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
@@ -38,32 +40,14 @@ public class RefresherOrb extends CustomRelic implements ClickableRelic {
             this.counter = -1;
             flash();
             beginLongPulse();
-            if (!energyEnable) {
-                ++AbstractDungeon.player.energy.energyMaster;
-                ++AbstractDungeon.player.energy.energy;
-                energyEnable = true;
-            }
         } else {
-            if (energyEnable) {
-                --AbstractDungeon.player.energy.energyMaster;
-                --AbstractDungeon.player.energy.energy;
-                energyEnable = false;
-            }
+            stopPulse();
         }
     }
 
     @Override
     public void onEquip() {
         setCount(0);
-    }
-
-    @Override
-    public void onUnequip() {
-        if (energyEnable) {
-            --AbstractDungeon.player.energy.energyMaster;
-            --AbstractDungeon.player.energy.energy;
-            energyEnable = false;
-        }
     }
 
     @Override
@@ -77,7 +61,6 @@ public class RefresherOrb extends CustomRelic implements ClickableRelic {
 
         flash();
         this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-
         this.addToBot(new DrawCardAction(AbstractDungeon.player, _Draw));
         EnergyPanel.setEnergy(AbstractDungeon.player.energy.energyMaster);
         setCount(_CD);
@@ -95,6 +78,10 @@ public class RefresherOrb extends CustomRelic implements ClickableRelic {
     public void atTurnStart() {
         isPlayerTurn = true;
         setCount(this.counter - 1);
+        if (this.counter  <= 0) {
+            flash();
+            this.addToBot(new GainEnergyAction(_Energy));
+        }
     }
 
     @Override
