@@ -15,6 +15,10 @@ import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 秘法鞋
+ * 每累计使用3张能力牌获得1点能量
+ */
 public class ArcaneBoots extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("ArcaneBoots");

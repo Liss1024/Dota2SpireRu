@@ -24,6 +24,10 @@ import java.util.Random;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * A杖
+ * 每场战斗第一次使用的能力牌结算2次
+ */
 public class AghanimScepter extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("AghanimScepter");

@@ -136,7 +136,7 @@
     "NAME": "Armlet of Mordiggian",
     "FLAVOR": "Weapon of choice among brutes, the bearer sacrifices his life energy to gain immense strength and power.",
     "DESCRIPTIONS": [
-      "In your turn, You can Right-click on this relic to enable Armlet. NL When Armlet enable, Gain #b{0} #yStrength , Lose #b{1} #yHP every turn。 NL Auto disable after the combat."
+      "At the start of combat, Gain #b{0} #yStrength , takes #b{1} #yDamage every turn start ."
     ]
   },
   "Dota2Spire:Dagon": {
