@@ -2,7 +2,6 @@ package dota2Spire.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -15,18 +14,21 @@ import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
-public class Dagon extends CustomRelic implements ClickableRelic {
+/**
+ * 大根
+ * 战斗开始时把1张达贡之神力洗入抽牌堆
+ * 进入商店自动花费25块钱升级 最高5级
+ * 达贡之神力 0费打10 消耗
+ */
+public class Dagon extends CustomRelic{
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("Dagon");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Dagon.png"));
-    //    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
-
-    private static final int _Gold = 75;
+    private static final int _upgradeGold = 25;
     private static final int _MaxLevel = 5;
 
     public Dagon() {
-//        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
-        super(ID, IMG, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, IMG, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
     @Override
@@ -35,24 +37,14 @@ public class Dagon extends CustomRelic implements ClickableRelic {
     }
 
     @Override
-    public void onRightClick() {
-        if (!isObtained) {
-            return;
-        }
-
-        if (AbstractDungeon.getCurrRoom() != null && AbstractDungeon.getCurrRoom() instanceof ShopRoom) {
-            if (AbstractDungeon.player.gold > _Gold && this.counter < _MaxLevel) {
-                AbstractDungeon.player.loseGold(_Gold);
-                flash();
-                this.counter++;
-            }
-        }
-    }
-
-    @Override
     public void onEnterRoom(AbstractRoom room) {
         if (room instanceof ShopRoom) {
             flash();
+            if (AbstractDungeon.player.gold > _upgradeGold && this.counter < _MaxLevel) {
+                AbstractDungeon.player.loseGold(_upgradeGold);
+                flash();
+                this.counter++;
+            }
         }
     }
 
@@ -64,7 +56,7 @@ public class Dagon extends CustomRelic implements ClickableRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return StringUtil.format(DESCRIPTIONS[0], _Gold, _MaxLevel);
+        return StringUtil.format(DESCRIPTIONS[0], _upgradeGold, _MaxLevel);
     }
 
     @Override

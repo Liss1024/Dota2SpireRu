@@ -19,6 +19,8 @@ public class Invisibility extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    private boolean justAdded = true;
+
     public Invisibility(final AbstractCreature owner, final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -26,7 +28,7 @@ public class Invisibility extends AbstractPower {
         this.amount = amount;
         this.type = PowerType.BUFF;
         this.img = TextureLoader.getTexture(makePowerPath("Invisibility.png"));
-
+        justAdded = true;
         updateDescription();
     }
 
@@ -39,8 +41,15 @@ public class Invisibility extends AbstractPower {
     }
 
     @Override
+    public void atStartOfTurn() {
+        justAdded = false;
+    }
+
+    @Override
     public void atEndOfTurn(boolean isPlayer) {
-        changeAmount(this.amount - 1);
+        if (!justAdded) {
+            changeAmount(this.amount - 1);
+        }
     }
 
     @Override

@@ -14,18 +14,20 @@ import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 强袭
+ * 每次获得护甲时额外获得2点护甲
+ * 获得护甲时给与敌方1层易伤，cd 3回合
+ */
 public class AssaultCuirass extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("AssaultCuirass");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("AssaultCuirass.png"));
-//    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
-
     private static final int _CD = 3;
     private static final int _VulnerableStack = 1;
     private static final int _Block = 2;
 
     public AssaultCuirass() {
-//        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         super(ID, IMG, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
@@ -37,7 +39,6 @@ public class AssaultCuirass extends CustomRelic {
     private void setCount(int count) {
         if (count <= 0) {
             this.counter = -1;
-            flash();
             beginLongPulse();
         } else {
             this.counter = count;
@@ -52,7 +53,7 @@ public class AssaultCuirass extends CustomRelic {
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             if (this.counter <= 0) {
                 for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(m, AbstractDungeon.player, new VulnerablePower(m, _VulnerableStack, false), _VulnerableStack));
+                    addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new VulnerablePower(m, _VulnerableStack, false), _VulnerableStack));
                 }
                 setCount(_CD);
             }

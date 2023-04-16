@@ -19,6 +19,10 @@ import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 辉耀
+ * 回合结束对敌方造成本回合使用牌数+2的伤害
+ */
 public class Radiance extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("Radiance");
@@ -49,12 +53,17 @@ public class Radiance extends CustomRelic {
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (m.currentHealth > 0) {
                     addToBot(new RelicAboveCreatureAction(m, this));
-                    this.addToTop(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.FIRE)));
+                    addToBot(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.FIRE)));
                     addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player, this.counter, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
                 }
             }
             this.counter = _amount;
         }
+    }
+
+    @Override
+    public void onVictory() {
+        this.counter = _amount;
     }
 
     @Override

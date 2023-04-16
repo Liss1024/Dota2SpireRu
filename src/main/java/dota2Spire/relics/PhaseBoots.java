@@ -14,6 +14,10 @@ import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 相位鞋
+ * 连续使用2技能牌抽一张牌
+ */
 public class PhaseBoots extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("PhaseBoots");

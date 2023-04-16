@@ -14,18 +14,20 @@ import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 冰甲
+ * 获得格挡时额外获得2点
+ * 获得格挡时给与所有敌人1虚弱 CD 3回合
+ */
 public class ShivaGuard extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("ShivaGuard");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ShivaGuard.png"));
-//    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
-
     private static final int _CD = 3;
     private static final int _WeakStack = 1;
     private static final int _Block = 2;
 
     public ShivaGuard() {
-//        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         super(ID, IMG, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
@@ -37,7 +39,6 @@ public class ShivaGuard extends CustomRelic {
     private void setCount(int count) {
         if (count <= 0) {
             this.counter = -1;
-            flash();
             beginLongPulse();
         } else {
             this.counter = count;
@@ -53,7 +54,7 @@ public class ShivaGuard extends CustomRelic {
             if (this.counter <= 0) {
                 for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                     if (m.currentHealth > 0) {
-                        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, _WeakStack, false), _WeakStack));
+                        addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, _WeakStack, false), _WeakStack));
                     }
                 }
                 setCount(_CD);

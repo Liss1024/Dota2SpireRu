@@ -30,11 +30,11 @@ public class HpRecovery extends AbstractPower {
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        changeAmount(this.amount - 1);
         flash();
         if (this.owner.currentHealth > 0) {
             this.owner.heal(3);
         }
+        changeAmount(this.amount - 1);
     }
 
     @Override

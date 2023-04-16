@@ -19,17 +19,19 @@ import java.util.List;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 暗灭
+ * 使用攻击牌时，对本场战斗第一次造成伤害怪赋予2易伤
+ */
 public class Desolator extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("Desolator");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Desolator.png"));
-    //    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
     private List<Integer> ids;
 
     private static final int _BuffStack = 2;
 
     public Desolator() {
-//        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         super(ID, IMG, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 

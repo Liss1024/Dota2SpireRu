@@ -23,7 +23,7 @@ public class ArmletOfMordiggian extends CustomRelic {
     public static final String ID = Dota2Spire.makeID("ArmletOfMordiggian");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ArmletOfMordiggian.png"));
 
-    private static final int _Strength = 2;
+    private static final int _StrengthStack = 2;
     private static final int _HPLose = 2;
 
     public ArmletOfMordiggian() {
@@ -33,7 +33,7 @@ public class ArmletOfMordiggian extends CustomRelic {
     @Override
     public void atBattleStart() {
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, _Strength), _Strength));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, _StrengthStack)));
     }
 
     @Override
@@ -45,7 +45,7 @@ public class ArmletOfMordiggian extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return StringUtil.format(DESCRIPTIONS[0], _Strength, _HPLose);
+        return StringUtil.format(DESCRIPTIONS[0], _StrengthStack, _HPLose);
     }
 
     @Override

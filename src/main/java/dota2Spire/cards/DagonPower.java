@@ -24,26 +24,27 @@ public class DagonPower extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
-    private static final int DAMAGE = 15;
+    private static final int DAMAGE = 10;
 
-    private static final int UPGRADE_PLUS_DMG = 10;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     public DagonPower() {
         super(Card_ID, NAME, IMG, COST, DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.BASIC, CardTarget.ENEMY);
-
         baseDamage = DAMAGE;
-
-        upgraded = true;
+        exhaust = true;
     }
 
     public DagonPower(int upgradeTimes) {
         super(Card_ID, NAME, IMG, COST, DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.BASIC, CardTarget.ENEMY);
-
         baseDamage = DAMAGE + UPGRADE_PLUS_DMG * (upgradeTimes - 1);
-
-        upgraded = true;
+        if (upgradeTimes > 1) {
+            upgraded = true;
+            this.name = this.name + "+" + upgradeTimes;
+            this.initializeTitle();
+        }
+        exhaust = true;
     }
 
     @Override
@@ -57,9 +58,10 @@ public class DagonPower extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToTop(new VFXAction(new LightningEffect(m.drawX, m.drawY)));
-        this.addToTop(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.LIGHTNING)));
-        this.addToTop(new SFXAction("ORB_LIGHTNING_EVOKE", 0.1F));
+        this.addToBot(new VFXAction(new LightningEffect(m.drawX, m.drawY)));
+        this.addToBot(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.LIGHTNING)));
+        this.addToBot(new SFXAction("ORB_LIGHTNING_EVOKE", 0.1F));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
     }
+
 }

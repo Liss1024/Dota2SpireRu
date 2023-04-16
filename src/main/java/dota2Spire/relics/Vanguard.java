@@ -11,17 +11,18 @@ import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 先锋盾
+ * 每回合第一次获得格挡时额外获得4点
+ */
 public class Vanguard extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("Vanguard");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Vanguard.png"));
-//    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
-
     private boolean active = false;
     private static final int _Block = 4;
 
     public Vanguard() {
-//        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         super(ID, IMG, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 

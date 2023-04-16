@@ -31,9 +31,9 @@ public class MpRecovery extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
-        changeAmount(this.amount - 1);
         flash();
         this.addToBot(new GainEnergyAction(1));
+        changeAmount(this.amount - 1);
     }
 
     @Override

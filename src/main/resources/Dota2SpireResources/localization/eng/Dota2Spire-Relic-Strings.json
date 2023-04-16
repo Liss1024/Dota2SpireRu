@@ -3,7 +3,7 @@
     "NAME": "Echo Sabre",
     "FLAVOR": "A deceptively swift blade imbued with resonant magic.",
     "DESCRIPTIONS": [
-      "Your next attack card will be played two times. NL CD #b{0} rounds."
+      "Your next #yAttack card will be played two times. NL CD #b{0} rounds."
     ]
   },
   "Dota2Spire:Butterfly": {
@@ -24,7 +24,7 @@
     "NAME": "Bottle",
     "FLAVOR": "An old bottle that survived the ages, the contents placed inside become enchanted.",
     "DESCRIPTIONS": [
-      "Can be used #b{0} times. NL In your turn, You can Right-click on this relic to gain #b{1} #yHpRecovery and #b{2} #yMpRecovery . NL Restored when you enter the rest room."
+      "Total #b{0} point. NL Gain #b{1} #yHpRecovery and #b{2} #yMpRecovery at start of combat. NL Restored point when you enter the rest room."
     ]
   },
   "Dota2Spire:HeartOfTarrasque": {
@@ -38,35 +38,35 @@
     "NAME": "Satanic",
     "FLAVOR": "Immense power at the cost of your soul.",
     "DESCRIPTIONS": [
-      "At the start of combat, Gain #b{0} #yStrength , NL In your turn, You can Right-click on this relic to gain #b{1} #yLifesteal . NL CD #b{2} rounds."
+      "At the start of combat, gain #b{0} #yStrength . NL At the start of turn, gain #b{1} #yLifesteal , CD #b{2} rounds."
     ]
   },
   "Dota2Spire:MaskOfMadness": {
     "NAME": "Mask Of Madness",
     "FLAVOR": "Once this mask is worn, its bearer becomes an uncontrollable aggressive force.",
     "DESCRIPTIONS": [
-      "In your turn, You can Right-click on this relic to gain  #b{0} #yLifesteal 和 #b{1} #yVulnerable , NL CD #b{2} rounds."
+      "At the start of turn, gain #b{0} #yLifesteal 和 #b{1} #yVulnerable . NL CD #b{2} rounds."
     ]
   },
   "Dota2Spire:ShadowBlade": {
     "NAME": "Shadow Blade",
     "FLAVOR": "The blade of a fallen king, it allows you to move unseen and strike from the shadows.",
     "DESCRIPTIONS": [
-      "In your turn, You can Right-click on this relic to gain #b{0} #yInvisibility . NL CD #b{1} rounds."
+      "At the end of turn, gain #b{0} #yInvisibility . NL CD #b{1} rounds."
     ]
   },
   "Dota2Spire:LotusOrb": {
     "NAME": "Lotus Orb",
     "FLAVOR": "The jewel at its center still reflects a pale image of its creator.",
     "DESCRIPTIONS": [
-      "In your turn, You can Right-click on this relic to gain Lotus Shield. NL When any enemy give you #yVulnerable or #yWeak , give same debuff to him . NL CD #b{0} rounds."
+      "Re-casts #yVulnerable or #yWeak back to their caster. NL CD #b{0} rounds."
     ]
   },
   "Dota2Spire:LinkenSphere": {
     "NAME": "Linken's Sphere",
     "FLAVOR": "This magical sphere once protected one of the most famous heroes in history.",
     "DESCRIPTIONS": [
-      "Invalidate next debuff witch from enemy . NL CD #b{0} rounds."
+      "At the end of your turn, gain #b{0} #yArtifact . NL CD #b{1} rounds."
     ]
   },
   "Dota2Spire:HandOfMidas": {
@@ -87,28 +87,28 @@
     "NAME": "Urn of Shadows",
     "FLAVOR": "Contains the ashes of powerful demons.",
     "DESCRIPTIONS": [
-      "Every #b{0} point Can be used once. NL In your turn, You can Right-click on this relic to gain #b{1} #yHpRecovery and #b{2} #yMpRecovery . NL gain #b1 point when enemy died.(Except  #yminions )"
+      "When enemy died, gain #b{0} #yHpRecovery and #b{1} #yMpRecovery . NL (Except  #yminions )"
     ]
   },
   "Dota2Spire:DrumOfEndurance": {
     "NAME": "Drum of Endurance",
     "FLAVOR": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
     "DESCRIPTIONS": [
-      "At the start of combat, Gain #b{1} #yStrength or #b{2} #yDexterity . NL It can be used for #b{0} times. NL In your turn, You can Right-click on this relic to gain #b{1} #yStrength and #b{2} #yDexterity . NL Only can be used once each combat."
+      "At the start of combat, Gain #b{0} #yStrength or #b{1} #yDexterity ."
     ]
   },
   "Dota2Spire:Bloodstone": {
     "NAME": "Bloodstone",
     "FLAVOR": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.",
     "DESCRIPTIONS": [
-      "Pick up gain #b{0} points, When the number of points is not less than #b{1} , Gain [E] at the start of each turn. NL Gain #b1 point when enemy died.(Except  #yminions ) NL When you lose #b{2}% of #yMaxHP , lose #b1 point. NL When the point is big than #b1 , In your turn, You can Right-click on this relic to lose half of the points, every lose point give you #b1  [E] and #b{3} #yHP . NL Only can be used once each combat."
+      "Gain [E] at the start of each turn. NL When ending your turn, your leftover #yEnergy is added to the Bloodstone point. NL At end of combat, lost all point to restore the corresponding health"
     ]
   },
   "Dota2Spire:RefresherOrb": {
     "NAME": "Refresher Orb",
     "FLAVOR": "A powerful artifact created for wizards.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of each turn when not in CD. NL In your turn, You can Right-click on this relic to gei [E] to Max and draw #b{0} cards. NL CD #b{1} rounds."
+      "Gain [E] at the start of each turn. NL When ending your turn, your leftover #yEnergy give you corresponding draw cards next turn."
     ]
   },
   "Dota2Spire:MonkeyKingBar": {
@@ -122,56 +122,49 @@
     "NAME": "Vanguard",
     "FLAVOR": "A powerful shield that defends its wielder from even the most vicious of attacks.",
     "DESCRIPTIONS": [
-      "Gain #b{0} additional #yblock when you gain #yblock first time in this turn."
+      "Gain #b{0} additional #yBlock when you gain #yBlock first time in this turn."
     ]
   },
   "Dota2Spire:BladeMail": {
     "NAME": "Blade Mail",
     "FLAVOR": "A razor-sharp coat of mail, it is the choice of selfless martyrs in combat.",
     "DESCRIPTIONS": [
-      "In your turn, You can Right-click on this relic to double your #yThorns , Then gain #b{0} #yThorns and #b{1} #yBlock , At start of next turn, remove all #yThorns . NL CD #b{2} rounds."
+      "Gain #b{0} #yThorns and #b{1} #yBlock at end of turn. NL CD #b{2} rounds."
     ]
   },
   "Dota2Spire:ArmletOfMordiggian": {
     "NAME": "Armlet of Mordiggian",
     "FLAVOR": "Weapon of choice among brutes, the bearer sacrifices his life energy to gain immense strength and power.",
     "DESCRIPTIONS": [
-      "At the start of combat, Gain #b{0} #yStrength , takes #b{1} #yDamage every turn start ."
+      "At the start of combat, Gain #b{0} #yStrength , NL takes #b{1} #yDamage every turn start."
     ]
   },
   "Dota2Spire:Dagon": {
     "NAME": "Dagon",
     "FLAVOR": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
     "DESCRIPTIONS": [
-      "At the start of combat, shuffle #b1 #yDagonPower into your draw pile。 NL In the Shop Room, You can Right-click on this relic to cost #b{0} gold to upgrade. NL Max Level is #b{1}."
-    ]
-  },
-  "Dota2Spire:CrimsonGuard": {
-    "NAME": "Crimson Guard",
-    "FLAVOR": "A cuirass originally built to protect against the dreaded Year Beast.",
-    "DESCRIPTIONS": [
-      "In your turn, You can Right-click on this relic to gain #b{1} #yblock for #b{0} turns in this combat. NL CD #b{2} rounds。"
+      "At the start of combat, shuffle #b1 #yDagonPower into your draw pile。 NL When Into the Shop Room, Auto cost #b{0} gold to upgrade. NL Max Level is #b{1} ."
     ]
   },
   "Dota2Spire:ShivaGuard": {
     "NAME": "Shiva's Guard",
     "FLAVOR": "Said to have belonged to a goddess, today it retains much of its former power.",
     "DESCRIPTIONS": [
-      "Gain #b{0} additional #yblock when you gain #yblock . NL Give all enemies #b{1} #yWeak when you gain #yblock , CD #b{2} rounds."
+      "Gain #b{0} additional #yBlock when you gain #yBlock . NL Give all enemies #b{1} #yWeak when you gain #yBlock , CD #b{2} rounds."
     ]
   },
   "Dota2Spire:AssaultCuirass": {
     "NAME": "Assault Cuirass",
     "FLAVOR": "Forged in the depths of the nether reaches, this hellish mail provides an army with increased armor and attack speed.",
     "DESCRIPTIONS": [
-      "Gain #b{0} additional #yblock when you gain #yblock . NL Give all enemies #b{1} #yVulnerable when you gain #yblock , CD #b{2} rounds."
+      "Gain #b{0} additional #yBlock when you gain #yBlock . NL Give all enemies #b{1} #yVulnerable when you gain #yBlock , CD #b{2} rounds."
     ]
   },
   "Dota2Spire:MantaStyle": {
     "NAME": "Manta Style",
     "FLAVOR": "An axe made of reflective materials that causes confusion amongst enemy ranks.",
     "DESCRIPTIONS": [
-      "In your turn, You can Right-click on this relic to copy a random card witch in your #yExhaust pile into your hand(Will not copy #rStatus card or #rCurse card). NL CD #b{0} rounds。"
+      "When you used #yExhaust card(Not #rStatus card or #rCurse card), make a copy into your hand. NL CD #b{0} rounds。"
     ]
   },
   "Dota2Spire:EyeOfSkadi": {
@@ -185,21 +178,21 @@
     "NAME": "Mjollnir",
     "FLAVOR": "Thor's magical hammer, made for him by the dwarves Brok and Eitri.",
     "DESCRIPTIONS": [
-      "When use attack card, each enemy have #b35% chance to get #b{0} additional damage."
+      "When use #yAttack card, each enemy have #b35% chance to get #b{0} additional damage."
     ]
   },
   "Dota2Spire:DivineRapier": {
     "NAME": "Divine Rapier",
     "FLAVOR": "So powerful, it cannot have a single owner.",
     "DESCRIPTIONS": [
-      "Attacks deal #b{0} additional damage. NL At the start of combat, Gain #b{1} #yVulnerable , #b{2} #yFrail ."
+      "Attacks deal #b{0} additional damage. NL At the start of turn, Gain #b{1} #yVulnerable , #b{2} #yFrail . CD #b{3} rounds."
     ]
   },
   "Dota2Spire:BlackKingBar": {
     "NAME": "Black King Bar",
     "FLAVOR": "A powerful staff imbued with the strength of giants.",
     "DESCRIPTIONS": [
-      "In your turn, You can Right-click on this relic to remove all debuff. NL CD #b{0} round."
+      "Remove all #yDebuff at your turn start. NL CD #b{0} round."
     ]
   },
   "Dota2Spire:PhaseBoots": {
@@ -241,7 +234,7 @@
     "NAME": "Ethereal Blade",
     "FLAVOR": "A flickering blade of a ghastly nature, it is capable of dealing damage in both magical and physical planes.",
     "DESCRIPTIONS": [
-      "When you use #yPower card, Give random enemy #b{0} #yWeak ."
+      "When you use #yPower card, Give random enemy #b{0} #yWeak or #b{1} #yVulnerable ."
     ]
   },
   "Dota2Spire:ArcaneBoots": {
@@ -256,6 +249,13 @@
     "FLAVOR": "A divine weapon that causes damage and a bright burning effect that lays waste to nearby enemies.",
     "DESCRIPTIONS": [
       "At the end of the turn, Damage all enemies. (By the number of cards used in the turn + #b{0} )"
+    ]
+  },
+  "Dota2Spire:AbyssalBlade": {
+    "NAME": "Abyssal Blade",
+    "FLAVOR": "The lost blade of the Commander of the Abyss, this edge cuts into an enemy's soul.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b{0} #yStrength . NL Every #b{1} th #yAttack card will give enemy #yStun ."
     ]
   }
 }

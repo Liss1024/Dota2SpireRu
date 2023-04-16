@@ -14,6 +14,10 @@ import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 假腿
+ * 连续打出2攻击牌抽一张牌
+ */
 public class PowerTreads extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("PowerTreads");

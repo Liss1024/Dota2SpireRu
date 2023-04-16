@@ -17,36 +17,33 @@ import java.util.Random;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 蝴蝶
+ * 战斗开始时获得2敏捷
+ * 15%几率闪避伤害
+ */
 public class Butterfly extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("Butterfly");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Butterfly.png"));
-    //    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
     public static Random random;
-
     private static final int _DexStack = 2;
     private static final int _DodgePercent = 15;
 
     public Butterfly() {
-//        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         super(ID, IMG, RelicTier.RARE, LandingSound.MAGICAL);
-    }
-
-    @Override
-    public void onEquip() {
-        random = new Random(Settings.seed + AbstractDungeon.floorNum);
     }
 
     @Override
     public void atBattleStart() {
         random = new Random(Settings.seed + AbstractDungeon.floorNum);
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, _DexStack), _DexStack));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, _DexStack), _DexStack));
     }
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount > 1 &&
+        if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount > 0 &&
                 roll()) {
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
@@ -56,7 +53,10 @@ public class Butterfly extends CustomRelic {
     }
 
     private boolean roll() {
-        return random.nextDouble() <= (_DodgePercent / 100f);
+        if (random != null) {
+            return random.nextDouble() <= (_DodgePercent / 100f);
+        }
+        return false;
     }
 
     @Override

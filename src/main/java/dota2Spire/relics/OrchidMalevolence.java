@@ -16,16 +16,17 @@ import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 紫苑
+ * 使用能力牌时给与随机敌人2易伤
+ */
 public class OrchidMalevolence extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("OrchidMalevolence");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("OrchidMalevolence.png"));
-//    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
-
     private static final int _VulnerableStack = 2;
 
     public OrchidMalevolence() {
-//        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         super(ID, IMG, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
@@ -36,7 +37,7 @@ public class OrchidMalevolence extends CustomRelic {
             if (randomMonster != null) {
                 this.flash();
                 addToBot(new RelicAboveCreatureAction(randomMonster, this));
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(randomMonster, AbstractDungeon.player, new VulnerablePower(randomMonster, _VulnerableStack, false), _VulnerableStack));
+                addToBot(new ApplyPowerAction(randomMonster, AbstractDungeon.player, new VulnerablePower(randomMonster, _VulnerableStack, false), _VulnerableStack));
             }
         }
 

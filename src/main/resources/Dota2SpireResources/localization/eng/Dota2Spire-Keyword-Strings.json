@@ -45,6 +45,6 @@
       "DagonPower",
       "dagonPower"
     ],
-    "DESCRIPTION": "Attack card, cost #b1  [E] .Base damage #b15 , when Dagon upgrade, add #b10 damage."
+    "DESCRIPTION": "Attack card, cost #b0  [E] , #yExhaust . Base damage #b10 , when Dagon upgrade, add #b4 damage."
   }
 ]

@@ -21,20 +21,23 @@ import java.util.List;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 冰眼
+ * 开局获得1力量1敏捷
+ * 对每个敌人第一次使用攻击牌时给与2虚弱
+ */
 public class EyeOfSkadi extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("EyeOfSkadi");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("EyeOfSkadi.png"));
-    //    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
     private List<Integer> ids;
 
     private static final int _BuffStack = 2;
-    private static final int _StrStack = 1;
+    private static final int _StrengthStack = 1;
     private static final int _DexStack = 1;
     private static final int _MaxHP = 5;
 
     public EyeOfSkadi() {
-//        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         super(ID, IMG, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
@@ -52,9 +55,8 @@ public class EyeOfSkadi extends CustomRelic {
             ids.clear();
         }
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, _StrStack), _StrStack));
-        addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, _DexStack), _DexStack));
-
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, _StrengthStack), _StrengthStack));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, _DexStack), _DexStack));
     }
 
     @Override
@@ -87,7 +89,7 @@ public class EyeOfSkadi extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return StringUtil.format(DESCRIPTIONS[0], _MaxHP, _StrStack, _DexStack, _BuffStack);
+        return StringUtil.format(DESCRIPTIONS[0], _MaxHP, _StrengthStack, _DexStack, _BuffStack);
     }
 
     @Override

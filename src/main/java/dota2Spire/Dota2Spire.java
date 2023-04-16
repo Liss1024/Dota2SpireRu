@@ -116,7 +116,6 @@ public class Dota2Spire implements EditRelicsSubscriber, EditCardsSubscriber,
         BaseMod.addRelic(new BladeMail(), RelicType.SHARED);
         BaseMod.addRelic(new ArmletOfMordiggian(), RelicType.SHARED);
         BaseMod.addRelic(new Dagon(), RelicType.SHARED);
-        BaseMod.addRelic(new CrimsonGuard(), RelicType.SHARED);
         BaseMod.addRelic(new ShivaGuard(), RelicType.SHARED);
         BaseMod.addRelic(new AssaultCuirass(), RelicType.SHARED);
         BaseMod.addRelic(new MantaStyle(), RelicType.SHARED);
@@ -132,6 +131,7 @@ public class Dota2Spire implements EditRelicsSubscriber, EditCardsSubscriber,
         BaseMod.addRelic(new EtherealBlade(), RelicType.SHARED);
         BaseMod.addRelic(new ArcaneBoots(), RelicType.SHARED);
         BaseMod.addRelic(new Radiance(), RelicType.SHARED);
+        BaseMod.addRelic(new AbyssalBlade(), RelicType.SHARED);
 
         System.out.println("Dota2Spire relic start");
 
@@ -186,7 +186,6 @@ public class Dota2Spire implements EditRelicsSubscriber, EditCardsSubscriber,
         UnlockTracker.markRelicAsSeen(BladeMail.ID);
         UnlockTracker.markRelicAsSeen(ArmletOfMordiggian.ID);
         UnlockTracker.markRelicAsSeen(Dagon.ID);
-        UnlockTracker.markRelicAsSeen(CrimsonGuard.ID);
         UnlockTracker.markRelicAsSeen(ShivaGuard.ID);
         UnlockTracker.markRelicAsSeen(AssaultCuirass.ID);
         UnlockTracker.markRelicAsSeen(MantaStyle.ID);
@@ -202,6 +201,7 @@ public class Dota2Spire implements EditRelicsSubscriber, EditCardsSubscriber,
         UnlockTracker.markRelicAsSeen(EtherealBlade.ID);
         UnlockTracker.markRelicAsSeen(ArcaneBoots.ID);
         UnlockTracker.markRelicAsSeen(Radiance.ID);
+        UnlockTracker.markRelicAsSeen(AbyssalBlade.ID);
         logger.info("Done adding relics!");
 
         receiveEditPotions();

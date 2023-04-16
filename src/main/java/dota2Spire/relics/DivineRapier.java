@@ -15,28 +15,55 @@ import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 圣剑
+ * 每隔2回合获得1易伤1脆弱
+ */
 public class DivineRapier extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("DivineRapier");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("DivineRapier.png"));
-//    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
-
     private static final int _Damage = 6;
-    private static final int _VulnerableStack = 3;
-    private static final int _FrailStack = 3;
+    private static final int _VulnerableStack = 1;
+    private static final int _FrailStack = 1;
+    private static final int _CD = 2;
 
     public DivineRapier() {
-//        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
-        super(ID, IMG, RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, IMG, RelicTier.BOSS, LandingSound.MAGICAL);
+    }
+
+    private void setCount(int count) {
+        if (count <= 0) {
+            this.counter = -1;
+            beginLongPulse();
+        } else {
+            this.counter = count;
+            stopPulse();
+        }
+    }
+
+    @Override
+    public void onEquip() {
+        setCount(_CD);
+    }
+
+    @Override
+    public void atTurnStart() {
+        if (this.counter <= 0) {
+            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                    new VulnerablePower(AbstractDungeon.player, _VulnerableStack, false)));
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                    new FrailPower(AbstractDungeon.player, _FrailStack, false)));
+            setCount(_CD);
+        } else {
+            setCount(this.counter - 1);
+        }
     }
 
     @Override
     public void atBattleStart() {
-        addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new VulnerablePower(AbstractDungeon.player, _VulnerableStack, false), _VulnerableStack));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new FrailPower(AbstractDungeon.player, _FrailStack, false), _FrailStack));
+
     }
 
     @Override
@@ -49,7 +76,7 @@ public class DivineRapier extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return StringUtil.format(DESCRIPTIONS[0], _Damage, _VulnerableStack, _FrailStack);
+        return StringUtil.format(DESCRIPTIONS[0], _Damage, _VulnerableStack, _FrailStack, _CD);
     }
 
     @Override

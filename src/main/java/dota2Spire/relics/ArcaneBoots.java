@@ -23,14 +23,11 @@ public class ArcaneBoots extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("ArcaneBoots");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ArcaneBoots.png"));
-//    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
-
     private static final int _Draw = 1;
     private static final int _Energy = 1;
     private static final int _Count = 3;
 
     public ArcaneBoots() {
-//        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         super(ID, IMG, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 

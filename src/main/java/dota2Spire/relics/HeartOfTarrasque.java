@@ -12,18 +12,20 @@ import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 龙心
+ * 获得时加8点hp上限
+ * 持续3回合没受到伤害，每回合结束后回复4点血
+ */
 public class HeartOfTarrasque extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("HeartOfTarrasque");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("HeartOfTarrasque.png"));
-//    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
-
     private static final int _MaxHP = 8;
     private static final int _HP = 4;
     private static final int _Round = 3;
 
     public HeartOfTarrasque() {
-//        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         super(ID, IMG, RelicTier.RARE, LandingSound.MAGICAL);
     }
 

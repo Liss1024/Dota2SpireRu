@@ -16,16 +16,19 @@ import dota2Spire.util.TextureLoader;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 回音战刃
+ * 下一张攻击牌结算2次
+ * CD 3回合
+ */
 public class EchoSabre extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("EchoSabre");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("EchoSabre.png"));
-//    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
 
     private static final int _CD = 3;
 
     public EchoSabre() {
-//        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         super(ID, IMG, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
@@ -37,7 +40,6 @@ public class EchoSabre extends CustomRelic {
     private void setCount(int count) {
         if (count <= 0) {
             this.counter = -1;
-            flash();
             beginLongPulse();
         } else {
             this.counter = count;
@@ -54,7 +56,7 @@ public class EchoSabre extends CustomRelic {
             AbstractMonster m = null;
             if (card.target != null)
                 m = (AbstractMonster) action.target;
-            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractCard tmp = card.makeSameInstanceOf();
             tmp.current_x = card.current_x;
             tmp.current_y = card.current_y;

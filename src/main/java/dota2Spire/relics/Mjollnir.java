@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -24,6 +23,10 @@ import java.util.Random;
 
 import static dota2Spire.Dota2Spire.makeRelicPath;
 
+/**
+ * 大雷锤
+ * 使用攻击牌时35%几率对所有敌人造成4伤害
+ */
 public class Mjollnir extends CustomRelic {
     // ID, images, text.
     public static final String ID = Dota2Spire.makeID("Mjollnir");
@@ -49,8 +52,8 @@ public class Mjollnir extends CustomRelic {
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (m.currentHealth > 0 && roll()) {
                     addToBot(new RelicAboveCreatureAction(m, this));
-                    this.addToTop(new VFXAction(new LightningEffect(m.drawX, m.drawY)));
-                    this.addToTop(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.LIGHTNING)));
+                    addToBot(new VFXAction(new LightningEffect(m.drawX, m.drawY)));
+                    addToBot(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.LIGHTNING)));
                     addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player, _Damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
                 }
             }
