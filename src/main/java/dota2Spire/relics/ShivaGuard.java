@@ -57,7 +57,7 @@ public class ShivaGuard extends CustomRelic {
                         addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, _WeakStack, false), _WeakStack));
                     }
                 }
-                setCount(_CD);
+                setCount(_CD + 1);
             }
             this.flash();
         }

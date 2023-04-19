@@ -132,6 +132,8 @@ public class Dota2Spire implements EditRelicsSubscriber, EditCardsSubscriber,
         BaseMod.addRelic(new ArcaneBoots(), RelicType.SHARED);
         BaseMod.addRelic(new Radiance(), RelicType.SHARED);
         BaseMod.addRelic(new AbyssalBlade(), RelicType.SHARED);
+        BaseMod.addRelic(new BlinkDagger(), RelicType.SHARED);
+        BaseMod.addRelic(new DiffusalBlade(), RelicType.SHARED);
 
         System.out.println("Dota2Spire relic start");
 
@@ -202,6 +204,8 @@ public class Dota2Spire implements EditRelicsSubscriber, EditCardsSubscriber,
         UnlockTracker.markRelicAsSeen(ArcaneBoots.ID);
         UnlockTracker.markRelicAsSeen(Radiance.ID);
         UnlockTracker.markRelicAsSeen(AbyssalBlade.ID);
+        UnlockTracker.markRelicAsSeen(BlinkDagger.ID);
+        UnlockTracker.markRelicAsSeen(DiffusalBlade.ID);
         logger.info("Done adding relics!");
 
         receiveEditPotions();

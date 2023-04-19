@@ -48,9 +48,7 @@ public class AbyssalBlade extends CustomRelic {
                 if (card.target == AbstractCard.CardTarget.ENEMY) {
                     this.counter = 0;
                     this.flash();
-                    AbstractMonster m = null;
-                    if (card.target != null)
-                        m = (AbstractMonster) action.target;
+                    AbstractMonster m = (AbstractMonster) action.target;
                     this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                     this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new StunMonsterPower(m, 1)));
                     this.stopPulse();

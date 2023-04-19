@@ -70,7 +70,7 @@ public class Invisibility extends AbstractPower {
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
-        return type == DamageInfo.DamageType.NORMAL ? damage * 1.5F : damage;
+        return type == DamageInfo.DamageType.NORMAL ? damage + 4 : damage;
     }
 
     @Override

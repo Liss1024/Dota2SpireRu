@@ -52,7 +52,7 @@
     "NAME": "Shadow Blade",
     "FLAVOR": "The blade of a fallen king, it allows you to move unseen and strike from the shadows.",
     "DESCRIPTIONS": [
-      "At the end of turn, gain #b{0} #yInvisibility . NL CD #b{1} rounds."
+      "At the end of your turn, gain #b{0} #yInvisibility . NL CD #b{1} rounds."
     ]
   },
   "Dota2Spire:LotusOrb": {
@@ -164,7 +164,7 @@
     "NAME": "Manta Style",
     "FLAVOR": "An axe made of reflective materials that causes confusion amongst enemy ranks.",
     "DESCRIPTIONS": [
-      "When you used #yExhaust card(Not #rStatus card or #rCurse card), make a copy into your hand. NL CD #b{0} rounds。"
+      "When you used #yExhaust card(Not #rStatus card or #rCurse card), make a copy into your hand. NL CD #b{0} rounds."
     ]
   },
   "Dota2Spire:EyeOfSkadi": {
@@ -248,7 +248,7 @@
     "NAME": "Radiance",
     "FLAVOR": "A divine weapon that causes damage and a bright burning effect that lays waste to nearby enemies.",
     "DESCRIPTIONS": [
-      "At the end of the turn, Damage all enemies. (By the number of cards used in the turn + #b{0} )"
+      "At the end of your turn, Damage all enemies. (By the number of cards used in the turn + #b{0} )"
     ]
   },
   "Dota2Spire:AbyssalBlade": {
@@ -256,6 +256,20 @@
     "FLAVOR": "The lost blade of the Commander of the Abyss, this edge cuts into an enemy's soul.",
     "DESCRIPTIONS": [
       "At the start of combat, gain #b{0} #yStrength . NL Every #b{1} th #yAttack card will give enemy #yStun ."
+    ]
+  },
+  "Dota2Spire:BlinkDagger": {
+    "NAME": "Blink Dagger",
+    "FLAVOR": "The fabled dagger used by the fastest assassin ever to walk the lands.",
+    "DESCRIPTIONS": [
+      "At the start of turn, discard any number of cards, then draw that many cards. NL CD #b{0} rounds."
+    ]
+  },
+  "Dota2Spire:DiffusalBlade": {
+    "NAME": "Diffusal Blade",
+    "FLAVOR": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
+    "DESCRIPTIONS": [
+      "Your next #yAttack card will remove all #yBlock from the enemy first. NL CD #b{0} rounds."
     ]
   }
 }

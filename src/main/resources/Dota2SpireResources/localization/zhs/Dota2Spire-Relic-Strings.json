@@ -257,5 +257,19 @@
     "DESCRIPTIONS": [
       "战斗开始时，获得 #b{0} 点 #y力量 。 NL 你每使用的第 #b{1} 张 #y攻击 牌 #y眩晕 敌人。"
     ]
+  },
+  "Dota2Spire:BlinkDagger": {
+    "NAME": "闪烁匕首",
+    "FLAVOR": "传说中这片大陆上来去如风的刺客使用的匕首。",
+    "DESCRIPTIONS": [
+      "回合开始时，丢弃任意张牌，然后抽相同数量张牌。 NL CD #b{0} 回合。"
+    ]
+  },
+  "Dota2Spire:DiffusalBlade": {
+    "NAME": "净魂之刃",
+    "FLAVOR": "一把直接切入敌人灵魂的魔力之刃。",
+    "DESCRIPTIONS": [
+      "下一张 #y攻击 牌会先去除一名敌人的所有 #y格挡 值。 NL CD #b{0} 回合。"
+    ]
   }
 }

@@ -37,7 +37,7 @@
       "Invisibility",
       "invisibility"
     ],
-    "DESCRIPTION": "Reduce take damage to half when you have #yInvisibility, your next card damage gain #b+50% up. Remove when you attack, every round #b-1 ."
+    "DESCRIPTION": "Reduce take damage to half when you have #yInvisibility, your next card damage #b+4 . Remove when you attack, every round #b-1 ."
   },
   {
     "PROPER_NAME": "DagonPower",

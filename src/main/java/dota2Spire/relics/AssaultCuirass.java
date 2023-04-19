@@ -55,7 +55,7 @@ public class AssaultCuirass extends CustomRelic {
                 for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                     addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new VulnerablePower(m, _VulnerableStack, false), _VulnerableStack));
                 }
-                setCount(_CD);
+                setCount(_CD + 1);
             }
             this.flash();
         }
